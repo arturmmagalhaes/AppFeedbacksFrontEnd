@@ -13,7 +13,7 @@ export default function Router (){
       <Route path="/" exact component={HomePage}/>
       <Route path="/signin" exact component={LoginPage}/>
       <Route path="/createfeedback/:id" exact component={CreateFeedback}/>
-      <Route path="/update/:id" exact component={UpdateFeedback}/>
+      <Route path="/update/:id" exact render={(props) => <UpdateFeedback {...props}/>} />
       <Route path="/getfeedbackreceived/" exact component={FeedbacksReceived}/>
       <Route path="/getcreatefeedback/" exact component={GetCreatedFeedback}/>
     </Switch>)

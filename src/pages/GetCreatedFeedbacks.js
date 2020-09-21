@@ -27,8 +27,8 @@ export default function GetCreatedFeedback() {
         );
     },[]);
 
-    const updateFeedback = (id) => {
-        history.push(`/update/${id}`)
+    const updateFeedback = (element) => {
+        history.push(`/update/${element.id}`, {element})
     }
 
     return(<>
@@ -48,7 +48,7 @@ export default function GetCreatedFeedback() {
                     <Styles.Email>{element.email}</Styles.Email>
                     <Styles.Name>{element.name}</Styles.Name>
                     <Styles.Feedback>{element.final_fb} - {element.improve} - {element.keep}</Styles.Feedback>
-                    <Styles.UpdateFeedback onClick={() => updateFeedback(element.id)}>X</Styles.UpdateFeedback>
+                    <Styles.UpdateFeedback onClick={() => updateFeedback(element)}>X</Styles.UpdateFeedback>
                 </Styles.divContent>)
             })}
             {data.length === 0 && 
