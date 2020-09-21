@@ -19,7 +19,6 @@ export default function HomePage (){
                 Authorization: token
             }})
             .then(response => {
-                console.log(response.data.result);
                 setData(response.data.result);
             })
             .catch(error => {

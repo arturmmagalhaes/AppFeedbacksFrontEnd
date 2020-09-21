@@ -6,7 +6,7 @@ export default function Header() {
     const history = useHistory();
 
     const homePage = () => {
-        history.push('/');
+        history.push('/home');
     }
 
     const createdFeedBack = () => {

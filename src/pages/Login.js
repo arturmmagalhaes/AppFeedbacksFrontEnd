@@ -23,7 +23,7 @@ export default function LoginPage() {
       axios.post(`http://localhost:3003/login`, form)
         .then(response => {
             localStorage.setItem('token', response.data.result.token);
-            history.push('/');
+            history.push('/home');
         })
         .catch(error => {
             alert(error.message);
